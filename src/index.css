@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+main {
+  padding-top: 50px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+button {
+  border: none;
+  box-shadow: 0px 3px 6px #00000029;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+}
+h1,
+h2,
+ol,
+figure,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.not-found > div {
+  padding: 24px;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  background: #8792d3 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 6px #00000029;
+  border-radius: 12px 12px 0 0;
+  opacity: 1;
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.nav-ol {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.nav-li {
+  padding-top: 5px;
+}
+.nav-img {
+  width: 16px;
+}
+a > .nav-text {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 10px;
+  padding-top: 5px;
+}
+.header {
+  background: transparent
+    linear-gradient(180deg, #d5daf2 0%, var(--unnamed-color-ffc6c6) 100%) 0% 0%
+    no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #d5daf2 0%, #ffc6c6 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  width: 100%;
+  height: 265px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.h1-title {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0px;
+  color: #2e328c;
+  opacity: 0.85;
+  font-size: 38px;
+  font-weight: 400;
+  text-align: center;
+}
+.h2-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #606ebf;
+  text-align: center;
+  padding: 15px 0 40px;
+  width: 184px;
+}
+.img-header {
+  width: 98px;
+  height: 89px;
+  position: absolute;
+  top: 178px;
+}
+.header-wave {
+  width: 100vw;
+  position: absolute;
+  top: 195px;
+}
+.form {
+  padding-top: 80px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+.btn-keep-button {
+  padding: 1rem 2rem;
+  background: #2e328c 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 4px;
+  width: 92%;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.input__label {
+  font-size: 18px;
+  color: #606ebf;
+  padding-bottom: 5px;
+  width: 90%;
+}
+.input__box {
+  border: 2px solid #d5daf2;
+  border-radius: 4px;
+  opacity: 0.9;
+  margin-bottom: 14px;
+  margin-top: 5px;
+  width: 100%;
+  height: 42px;
+}
+input[name="description"] {
+  height: 90px;
+}
+.add-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 45px 20px 0;
+}
+.add-entry__btn {
+  background: #ffc6c6 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 30px;
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+.add-entry__text {
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: #ffc6c6;
+  text-transform: uppercase;
+}
+.list_entries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+.list_entry {
+  background: #606ebf 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #00000029;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-top: 4px;
+}
+.list_entry__plus {
+  font-size: 18px;
+  font-family: "Montserrat";
+  padding-right: 22px;
+}
+.list_entry__date {
+  font-family: "Montserrat";
+  font-size: 14px;
+  text-align: right;
+}
+.card {
+  background: #606ebf 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #00000029;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  margin: 5px 25px;
+  padding: 20px;
+  color: #fff;
+}
+.card-pink {
+  background: #f29d9d 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px #00000029;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  margin: 5px 25px;
+  padding: 20px;
+  color: #fff;
+}
+.card-pink__text {
+  padding-bottom: 20px;
+  font-family: "Montserrat";
+  line-height: 1.4rem;
+}
+.card__title {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #ffffff;
+  padding-left: 24px;
+  text-transform: capitalize;
+}
+.card__weather {
+  padding: 20px 0;
+}
+.card__weather--temp {
+  text-align: left;
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #ffffff;
+  opacity: 0.7;
+  margin: 0;
+}
+.card__weather--location {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.75;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+.card__weather--description {
+  text-align: left;
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  opacity: 1;
+}
+.card__weather--icon {
+  padding-right: 18px;
+}
+.fadein {
+  transition-timing-function: ease-in;
+  animation: fadein 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.desktop-note {
+  max-width: 450px;
+  margin: 20% auto;
+  padding: 40px;
+}
+.desktop-note_p {
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
