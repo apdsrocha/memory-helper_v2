@@ -45,18 +45,20 @@ export default function Entry(props) {
           <div className="card__weather flex-row">
             <div className="card__weather--icon">
               <img
-                alt="weather icon"
-                src={`http://openweathermap.org/img/wn/${
+                alt=""
+                src={ !!entryList.weather ? `http://openweathermap.org/img/wn/${
                   entryList[props.id].weather.weather[0].icon
-                }.png`}
+                }.png` : ''}
               />
             </div>
             <div className="card__weather--text">
               <p className="card__weather--temp">
-                {entryList[props.id].weather.main.temp} °C
+                {!!entryList.weather ? 
+                entryList[props.id].weather.main.temp : ''} °C
               </p>
               <p className="card__weather--location">
-                {entryList[props.id].location}
+                {!!entryList.weather ? entryList[props.id].location :
+                'Location not found'}
               </p>
             </div>
           </div>
