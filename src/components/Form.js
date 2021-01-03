@@ -24,7 +24,7 @@ export default function Form(props) {
         const unsubscribe = store.subscribe(() => store.getState());
         const entries = await store.getState();
         const weatherData = await EntriesServices.getWeather(
-          inputLocation.current.value
+          inputLocation.current.value.trim()
         );
         store.dispatch(
           saveEntry(
