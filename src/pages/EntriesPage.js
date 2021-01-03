@@ -10,7 +10,7 @@ export default function EntriesPage() {
       <Menu />
       <main>
         <div className="add-entry">
-          <Link to={"/"}>
+          <Link to={"/"} className="flex-column">
             <button className="add-entry__btn">+</button>
           </Link>
           <p className="add-entry__text">Add Entry</p>
