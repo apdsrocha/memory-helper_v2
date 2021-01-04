@@ -211,8 +211,9 @@ input[name="description"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 88%;
   margin-bottom: 60px;
+  padding-left: 20px;
 }
 .list_entry {
   background: #606ebf 0% 0% no-repeat padding-box;
@@ -228,7 +229,7 @@ input[name="description"] {
 .list_entry__plus {
   font-size: 18px;
   font-family: "Montserrat";
-  padding-right: 22px;
+  padding-right: 10px;
 }
 .list_entry__date {
   font-family: "Montserrat";
