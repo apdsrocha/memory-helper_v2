@@ -58,7 +58,7 @@ const Entries = () => {
                   >
                     <div>
                       <span className="list_entry__plus">+ </span>
-                      <span>{item.keyword} </span>
+                      <span>{item.keyword.length > 10 ? `${item.keyword.substring(0, 10)}...` : item.keyword } </span>
                     </div>
                     <div>
                       <span className="list_entry__date">{item.date}</span>
