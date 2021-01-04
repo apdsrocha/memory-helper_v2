@@ -21,21 +21,23 @@ const Entries = () => {
   }, [entryList, store]);
 
   const deleteBtn = (event) => {
-   
-    try {
-      const unsubscribe = store.subscribe(() => store.getState());
-      store.dispatch(
-        deleteEntries(event.target.dataset.id)
-      );
-      setLista(store.getState())
-      unsubscribe();
+    if(window.confirm('Delete the item?')) {
+      try {
+        const unsubscribe = store.subscribe(() => store.getState());
+        store.dispatch(
+          deleteEntries(event.target.dataset.id)
+        );
+        setLista(store.getState())
+        unsubscribe();
 
-    } catch (e) {
-      alert(e.message);
-      console.error(e);
+      } catch (e) {
+        alert(e.message);
+        console.error(e);
+      }
+    } else {
+      return '';
     }
-
-    } 
+  } 
   
   return (
     <ul className="list_entries">
@@ -47,6 +49,7 @@ const Entries = () => {
             } else {
               return (
                 <div key={index} className="flex-space-between">
+                <button className="btn-erase" data-id={index} onClick={deleteBtn}><img src={trash} data-id={index} className="btn-erase__icon" alt='delete entry button'/></button>
                 <Link key={index} to={`/entry?id=${index}`} className="list_entry__row">
                   <li
                     key={index}
@@ -62,7 +65,6 @@ const Entries = () => {
                     </div>
                   </li>
                 </Link>
-                <button className="btn-erase" data-id={index} onClick={deleteBtn}><img src={trash} data-id={index} className="btn-erase__icon" alt='delete entry button'/></button>
                 </div>
               );
             }
