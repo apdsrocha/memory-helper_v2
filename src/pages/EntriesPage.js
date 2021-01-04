@@ -1,7 +1,7 @@
 import Header from "../components/Header.js";
 import Menu from "../components/Menu.js";
 import Entries from "../components/Entries.js";
-import { Link } from "react-router-dom";
+import AddEntryBtn from "../components/AddEntryBtn.js"
 
 export default function EntriesPage() {
   return (
@@ -9,14 +9,7 @@ export default function EntriesPage() {
       <Header />
       <Menu />
       <main>
-        <div className="add-entry">
-          <Link to={"/"}>
-            <button className="add-entry__btn flex-column">
-              <span className="flex-column">+</span>
-            </button>
-          </Link>
-          <p className="add-entry__text">Add Entry</p>
-        </div>
+        <AddEntryBtn />
         <Entries />
       </main>
     </div>
