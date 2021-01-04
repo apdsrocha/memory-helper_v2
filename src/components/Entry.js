@@ -53,7 +53,7 @@ export default function Entry(props) {
             </div>
             <div className="card__weather--text">
               <p className="card__weather--temp">
-                {entryList[props.id].weather.main.temp} °C
+                {(entryList[props.id].weather.main.temp).toFixed(1)} °C
               </p>
               <p className="card__weather--location">
                 {entryList[props.id].location}
