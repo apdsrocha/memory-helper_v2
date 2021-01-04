@@ -150,10 +150,11 @@ a > .nav-text {
   margin-bottom: 60px;
 }
 .btn-erase {
-  color: pink;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   margin: 5px;
+  background: #ffc6c6;
 }
 input[type="text"],
 textarea[type="text"],
@@ -218,8 +219,6 @@ input[name="description"] {
   font-size: 18px;
   text-transform: capitalize;
   margin-top: 4px;
-  width: 100%;
-  min-width: 225px;
 }
 .list_entry__plus {
   font-size: 18px;
@@ -230,6 +229,10 @@ input[name="description"] {
   font-family: "Montserrat";
   font-size: 14px;
   text-align: right;
+}
+.list_entry__row {
+  width: 100%;
+  min-width: 126px;
 }
 .card {
   background: #606ebf 0% 0% no-repeat padding-box;
