@@ -1,4 +1,4 @@
-import { SAVE_ENTRY, GET_ENTRIES } from "../actions/action";
+import { SAVE_ENTRY, GET_ENTRIES, DELETE_ENTRIES } from "../actions/action";
 
 const initialState = [
   {
@@ -28,6 +28,8 @@ function reducer(state = initialState, action) {
     return {
       ...state,
     };
+  } else if (action.type === DELETE_ENTRIES) {
+      return state.filter((item, index) => index !== parseInt(action.payload.id));
   }
   return state;
 }

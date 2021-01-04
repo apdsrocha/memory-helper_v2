@@ -1,5 +1,6 @@
 export const SAVE_ENTRY = "SAVE_ENTRY";
 export const GET_ENTRIES = "GET_ENTRIES";
+export const DELETE_ENTRIES = "DELETE_ENTRIES";
 
 export function saveEntry(location, keyword, description, id, weather, date) {
   return {
@@ -20,3 +21,12 @@ export function getEntries() {
     type: GET_ENTRIES,
   };
 }
+export function deleteEntries(id) {
+  return {
+    type: DELETE_ENTRIES,
+    payload: {
+      id: id,
+    }
+  };
+}
+
