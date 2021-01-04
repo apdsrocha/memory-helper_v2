@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ReactReduxContext } from "react-redux";
 import { Link } from "react-router-dom";
 import { saveState } from "../services/localStorage";
+import { deleteEntries } from "../store/actions/action";
 
 const Entries = () => {
   const [entryList, setLista] = useState();
@@ -18,6 +19,23 @@ const Entries = () => {
     unsubscribe();
   }, [entryList, store]);
 
+  const deleteBtn = (event) => {
+   
+    try {
+      const unsubscribe = store.subscribe(() => store.getState());
+      store.dispatch(
+        deleteEntries(event.target.dataset.id)
+      );
+      setLista(store.getState())
+      unsubscribe();
+
+    } catch (e) {
+      alert(e.message);
+      console.error(e);
+    }
+
+    } 
+  
   return (
     <ul className="list_entries">
       {!!entryList ? (
@@ -27,6 +45,7 @@ const Entries = () => {
               return <li key={index}></li>;
             } else {
               return (
+                <div key={index} className="flex-space-between">
                 <Link key={index} to={`/entry?id=${index}`}>
                   <li
                     key={index}
@@ -42,6 +61,8 @@ const Entries = () => {
                     </div>
                   </li>
                 </Link>
+                <button className="btn-erase" data-id={index} onClick={deleteBtn}>erase</button>
+                </div>
               );
             }
           })
