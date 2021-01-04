@@ -3,6 +3,7 @@ import { ReactReduxContext } from "react-redux";
 import { Link } from "react-router-dom";
 import { saveState } from "../services/localStorage";
 import { deleteEntries } from "../store/actions/action";
+import trash from "../images/trash.png";
 
 const Entries = () => {
   const [entryList, setLista] = useState();
@@ -46,7 +47,7 @@ const Entries = () => {
             } else {
               return (
                 <div key={index} className="flex-space-between">
-                <Link key={index} to={`/entry?id=${index}`}>
+                <Link key={index} to={`/entry?id=${index}`} className="list_entry__row">
                   <li
                     key={index}
                     data-entry={index}
@@ -61,7 +62,7 @@ const Entries = () => {
                     </div>
                   </li>
                 </Link>
-                <button className="btn-erase" data-id={index} onClick={deleteBtn}>erase</button>
+                <button className="btn-erase" data-id={index} onClick={deleteBtn}><img src={trash} data-id={index} className="btn-erase__icon" alt='delete entry button'/></button>
                 </div>
               );
             }
