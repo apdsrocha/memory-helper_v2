@@ -9,7 +9,7 @@ export default function Header() {
         Keep your daily memories focused on how you feel.
       </h2>
       <img alt="" className="img-header" src={headerImg} />
-      <div className="header-wave">
+      <div className="header-wave hide-on-desktop">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
