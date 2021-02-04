@@ -4,7 +4,7 @@ import Form from "../components/Form.js";
 
 export default function HomePage(props) {
   return (
-    <div className="App">
+    <>
       <Header />
       <Menu />
       <main className="hide-on-desktop">
@@ -17,6 +17,6 @@ export default function HomePage(props) {
           browser window to make it smaller or view it on a mobile device :)
         </p>
       </aside>
-    </div>
+    </>
   );
 }

@@ -5,13 +5,13 @@ import AddEntryBtn from "../components/AddEntryBtn.js"
 
 export default function EntriesPage() {
   return (
-    <div className="App">
+    <>
       <Header />
       <Menu />
       <main>
         <AddEntryBtn />
         <Entries />
       </main>
-    </div>
+    </>
   );
 }

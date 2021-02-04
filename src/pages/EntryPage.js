@@ -13,7 +13,7 @@ export default function EntryPage(props)
   const id = params.get('id');
 
     return (
-      <div className="App">
+      <>
         <Header />
         <Menu />
         <main>
@@ -22,6 +22,6 @@ export default function EntryPage(props)
             <Entry id={id} />
           </Suspense>
         </main>
-      </div>
+      </>
     );
 }

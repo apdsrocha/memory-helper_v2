@@ -48,10 +48,10 @@ const Entries = () => {
               return <li key={index}></li>;
             } else {
               return (
-                <div key={index} className="flex-space-between">
+                <li key={index} className="flex-space-between">
                 <button className="btn-erase" data-id={index} onClick={deleteBtn}><img src={trash} data-id={index} className="btn-erase__icon" alt='delete entry button'/></button>
                 <Link key={index} to={`/entry?id=${index}`} className="list_entry__row">
-                  <li
+                  <div
                     key={index}
                     data-entry={index}
                     className="list_entry flex-space-between fadein"
@@ -63,9 +63,9 @@ const Entries = () => {
                     <div>
                       <span className="list_entry__date">{item.date}</span>
                     </div>
-                  </li>
+                  </div>
                 </Link>
-                </div>
+                </li>
               );
             }
           })

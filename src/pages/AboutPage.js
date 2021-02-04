@@ -4,12 +4,12 @@ import Card from "../components/Card.js";
 
 export default function AboutPage() {
   return (
-    <div className="App">
+    <>
       <Header />
       <Menu />
       <main>
         <Card />
       </main>
-    </div>
+    </>
   );
 }
